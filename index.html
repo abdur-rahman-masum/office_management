@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            text-shadow: 1px 1px 2px #ccc;
+            margin: 20px 0;
+        }
+        .header-info {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+        }
+        .header-info p {
+            margin: 5px;
+            font-size: 18px;
+        }
+        .schedule-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        li {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f1f8ff;
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: #e0f7fa;
+            transform: translateY(-2px);
+        }
+        .class-modules {
+            display: none;
+            padding: 10px;
+            background-color: #e7f3ff;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            margin-top: 5px;
+            transition: all 0.5s ease;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            .schedule-container {
+                padding: 15px;
+            }
+            li {
+                padding: 10px;
+            }
+        }
+    </style>
+    <script>
+        function toggleModules(moduleId) {
+            const moduleElement = document.getElementById(moduleId);
+            if (moduleElement.style.display === "none" || moduleElement.style.display === "") {
+                moduleElement.style.display = "block";
+                moduleElement.style.maxHeight = "500px"; // Adjust as needed
+            } else {
+                moduleElement.style.display = "none";
+                moduleElement.style.maxHeight = "0";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Class Schedule</h1>
+    <div class="header-info">
+        <p>Instructor: Abdur Rahman Masum</p>
+        <p>Subjects: Microsoft Word, Excel, PowerPoint & Photoshop</p>
+        <p>Classes: Saturday, Monday, Wednesday at 6:30 PM</p>
+    </div>
+
+    <div class="schedule-container">
+        <h2>Microsoft Word, Excel, PowerPoint & Photoshop ক্লাসের সময়সূচী ও বিষয়বস্তু</h2>
+
+        <!-- Microsoft Word Classes -->
+        <h3>১ম ও ২য় সপ্তাহ (Microsoft Word)</h3>
+        <ul>
+            <li onclick="toggleModules('module1')">
+                <strong>ক্লাস ১ (৯ অক্টোবর):</strong> পরিচিতি, Word ইন্টারফেস, ডকুমেন্ট তৈরি ও সেভ করা
+                <div id="module1" class="class-modules">
+                    <p>মডিউল: Word ইন্টারফেস এবং ডকুমেন্ট তৈরি করার প্রাথমিক নির্দেশনা।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 1!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module2')">
+                <strong>ক্লাস ২ (১২ অক্টোবর):</strong> টেক্সট ফরম্যাটিং (ফন্ট, সাইজ, স্টাইল)
+                <div id="module2" class="class-modules">
+                    <p>মডিউল: টেক্সট ফরম্যাটিং-এর বিভিন্ন কৌশল এবং ব্যবহার।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 2!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module3')">
+                <strong>ক্লাস ৩ (১৪ অক্টোবর):</strong> প্যারাগ্রাফ ফরম্যাটিং (অ্যালাইনমেন্ট, স্পেসিং)
+                <div id="module3" class="class-modules">
+                    <p>মডিউল: প্যারাগ্রাফের ফরম্যাটিং এর জন্য কৌশল এবং বিকল্প।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 3!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module4')">
+                <strong>ক্লাস ৪ (১৬ অক্টোবর):</strong> হেডার, ফুটার, ও পেজ নম্বর
+                <div id="module4" class="class-modules">
+                    <p>মডিউল: হেডার, ফুটার এবং পেজ নম্বর ব্যবহার।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 4!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module5')">
+                <strong>ক্লাস ৫ (১৯ অক্টোবর):</strong> ইমেজ ও টেবিল ইনসার্ট করা
+                <div id="module5" class="class-modules">
+                    <p>মডিউল: ডকুমেন্টে ইমেজ ও টেবিল সন্নিবেশ করার কৌশল।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 5!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module6')">
+                <strong>ক্লাস ৬ (২১ অক্টোবর):</strong> লিস্ট তৈরি (বুলেট ও নম্বর)
+                <div id="module6" class="class-modules">
+                    <p>মডিউল: বুলেট এবং নম্বর লিস্ট তৈরি ও ব্যবহারের নির্দেশনা।</p>
+                    <button class="button" onclick="alert('Join Microsoft Word Class 6!')">Join Class</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Microsoft Excel Classes -->
+        <h3>৩য় ও ৪র্থ সপ্তাহ (Microsoft Excel)</h3>
+        <ul>
+            <li onclick="toggleModules('module7')">
+                <strong>ক্লাস ৭ (২৩ অক্টোবর):</strong> Excel পরিচিতি এবং স্প্রেডশিট তৈরি
+                <div id="module7" class="class-modules">
+                    <p>মডিউল: স্প্রেডশিট তৈরি এবং সেভ করার কৌশল।</p>
+                    <button class="button" onclick="alert('Join Microsoft Excel Class 1!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module8')">
+                <strong>ক্লাস ৮ (২৬ অক্টোবর):</strong> সেল ফরম্যাটিং এবং ডেটা ইনপুট
+                <div id="module8" class="class-modules">
+                    <p>মডিউল: সেল ফরম্যাটিং এবং ডেটা ইনপুট-এর বিভিন্ন পদ্ধতি।</p>
+                    <button class="button" onclick="alert('Join Microsoft Excel Class 2!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module9')">
+                <strong>ক্লাস ৯ (২৮ অক্টোবর):</strong> ফর্মুলা এবং ফাংশন ব্যবহার
+                <div id="module9" class="class-modules">
+                    <p>মডিউল: সাধারণ ফর্মুলা এবং ফাংশনের ব্যবহার।</p>
+                    <button class="button" onclick="alert('Join Microsoft Excel Class 3!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module10')">
+                <strong>ক্লাস ১০ (৩০ অক্টোবর):</strong> চার্ট তৈরি এবং ডাটা বিশ্লেষণ
+                <div id="module10" class="class-modules">
+                    <p>মডিউল: চার্ট এবং ডাটা বিশ্লেষণের কৌশল।</p>
+                    <button class="button" onclick="alert('Join Microsoft Excel Class 4!')">Join Class</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- PowerPoint Classes -->
+        <h3>৫ম ও ৬ষ্ঠ সপ্তাহ (Microsoft PowerPoint)</h3>
+        <ul>
+            <li onclick="toggleModules('module11')">
+                <strong>ক্লাস ১১ (২ নভেম্বর):</strong> PowerPoint ইন্টারফেস এবং প্রেজেন্টেশন তৈরি
+                <div id="module11" class="class-modules">
+                    <p>মডিউল: প্রেজেন্টেশন তৈরি এবং স্লাইড যোগ করার কৌশল।</p>
+                    <button class="button" onclick="alert('Join Microsoft PowerPoint Class 1!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module12')">
+                <strong>ক্লাস ১২ (৪ নভেম্বর):</strong> টেক্সট, ইমেজ এবং গ্রাফিক্স সন্নিবেশ করা
+                <div id="module12" class="class-modules">
+                    <p>মডিউল: স্লাইডে টেক্সট এবং ইমেজ সন্নিবেশ করার পদ্ধতি।</p>
+                    <button class="button" onclick="alert('Join Microsoft PowerPoint Class 2!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module13')">
+                <strong>ক্লাস ১৩ (৬ নভেম্বর):</strong> অ্যানিমেশন এবং ট্রানজিশন ব্যবহার
+                <div id="module13" class="class-modules">
+                    <p>মডিউল: অ্যানিমেশন এবং ট্রানজিশনের ব্যবহার।</p>
+                    <button class="button" onclick="alert('Join Microsoft PowerPoint Class 3!')">Join Class</button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Photoshop Classes -->
+        <h3>৭ম ও ৮ম সপ্তাহ (Photoshop)</h3>
+        <ul>
+            <li onclick="toggleModules('module14')">
+                <strong>ক্লাস ১৪ (৯ নভেম্বর):</strong> Photoshop ইন্টারফেস পরিচিতি
+                <div id="module14" class="class-modules">
+                    <p>মডিউল: Photoshop ইন্টারফেস এবং টুলস-এর প্রাথমিক ব্যবহার।</p>
+                    <button class="button" onclick="alert('Join Photoshop Class 1!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module15')">
+                <strong>ক্লাস ১৫ (১১ নভেম্বর):</strong> লেয়ার এবং সিলেকশন টুল ব্যবহার
+                <div id="module15" class="class-modules">
+                    <p>মডিউল: লেয়ার এবং সিলেকশন টুল ব্যবহারের কৌশল।</p>
+                    <button class="button" onclick="alert('Join Photoshop Class 2!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module16')">
+                <strong>ক্লাস ১৬ (১৩ নভেম্বর):</strong> ইমেজ রিটাচিং এবং কালার কারেকশন
+                <div id="module16" class="class-modules">
+                    <p>মডিউল: ইমেজ রিটাচিং এবং কালার কারেকশনের পদ্ধতি।</p>
+                    <button class="button" onclick="alert('Join Photoshop Class 3!')">Join Class</button>
+                </div>
+            </li>
+            <li onclick="toggleModules('module17')">
+                <strong>ক্লাস ১৭ (১৬ নভেম্বর):</strong> ব্যানার ডিজাইন এবং লোগো তৈরি
+                <div id="module17" class="class-modules">
+                    <p>মডিউল: ব্যানার ডিজাইন এবং লোগো তৈরির কৌশল।</p>
+                    <button class="button" onclick="alert('Join Photoshop Class 4!')">Join Class</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>
